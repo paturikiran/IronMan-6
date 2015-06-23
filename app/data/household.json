@@ -1,0 +1,15 @@
+
+ {
+"householditems":
+[{ 
+ "name":"Crockery",
+"url":"app/images/household1.jpg"
+
+ }, 
+ {
+ "name":"Water Jug",
+ "url":"app/images/household2.jpg"
+
+ }
+ ]
+ }
