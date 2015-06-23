@@ -3,7 +3,7 @@
 
 <div ng-controller="gadgetsctrl">
 <select ng-change="selectGadget()"
-        ng-options="item.name group by item.type for item in gadgetTypes"
+        ng-options=" item.name group by item.type for item in gadgetTypes"
         ng-model="gadgetType">
 
 </select>
@@ -20,15 +20,12 @@
 {{item.name|uppercase}}      Price :{{item.price|currency:'Rs.'}}
 
 </span>
-
-
-
-
 </a>
- <span class="product-name">
+    <button class="btin btn-primary" ng-click="addToCart(item)">Add to Cart</button>
+<!-- <span class="product-name">
 <input type="checkbox" ng-checked="item.selected"/>
 
-</span>
+</span>-->
 
 </div>
 

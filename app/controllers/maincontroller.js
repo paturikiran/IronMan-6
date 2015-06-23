@@ -1,5 +1,5 @@
-app.controller('mainCtrl', ['$scope','menuService',
-    function ($scope,menuService) {
+app.controller('mainCtrl', ['$scope','$rootScope','menuService','cartService',
+    function ($scope,$rootScope,menuService,cartService) {
     $scope.menuitems = [];
 
        /*  menuService.getMenuItems()
@@ -17,5 +17,11 @@ app.controller('mainCtrl', ['$scope','menuService',
 
     $scope.select = function (param) {
         $scope.templateUrl = param.templateUrl;
-    }
+    };
+        $scope.cartItems = cartService.addOrSelectCart();
+        //$rootScope.noOfCartitems =$scope.cartItems.length?$scope.cartItems.length:0;
+
+        $scope.$on('itemAdded',function(){
+            $scope.noOfCartitems =$scope.cartItems.length?$scope.cartItems.length:0;
+        })
 }]);

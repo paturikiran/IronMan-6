@@ -36,7 +36,11 @@
                     <input type="text" placeholder="Search" ng-model="search" class="form-control">
                 </div>
             </form>
-
+             <ul>
+                 <li>
+                     <a href="#" ng-mouseover="loadCart()">{{noOfCartitems}}</a>
+                 </li>
+             </ul>
 
         </div>
     </nav>
@@ -45,6 +49,7 @@
 
 
 </body>
+<script src="app/services/cartService.js"></script>
 <script src="app/services/menuService.js"></script>
 <script src="app/services/fashionService.js"></script>
 <script src="app/filters/phoneFormatter.js"></script>
@@ -52,4 +57,5 @@
 <script src="app/controllers/gadgetcontroller.js" type="text/javascript"></script>
 <script src="app/controllers/fashioncontroller.js" type="text/javascript"></script>
 <script src="app/controllers/householdcontroller.js" type="text/javascript"></script>
+<script src="app/controllers/shoppingBasketController.js"></script>
 </html>
